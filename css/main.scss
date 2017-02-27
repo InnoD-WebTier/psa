@@ -1,53 +1,54 @@
 @import "./vendors/normalize";
+@import "./variables";
+@import "./navbar";
 
-$font-header: 'Circular-Bold', sans-serif;
-$font-body: 'Circular', sans-serif;
-$primary-blue: #2196F3;
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/Circular-Book.ttf')  format('truetype'),
+body {
+  background: -webkit-linear-gradient(bottom left, $primary-blue 0%, $primary-eggshell 100%);
+  background: -o-linear-gradient(bottom left, $primary-blue 0%, $primary-eggshell 100%);
+  background: linear-gradient(to top right, $primary-blue 0%, $primary-eggshell 100%);
 }
 
-@font-face {
-  font-family: 'Circular-Bold';
-  src: url('./fonts/Circular-Bold.ttf')  format('truetype'),
-}
-
-html, body {
-  height: 100%;
-  margin: 0rem;
-  padding: 0rem;
-}
-
-.header-container {
-  height: 10vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  .header {
-    flex: 1;
-    margin-left: 2rem;
-    font-size: 1.2rem;
-    font-family: $font-header;
-    color: $primary-blue;
-  }
-  .search {
-    flex: 2;
-    input {
-      outline: 0;
-      text-decoration: none;
-      border: 0;
-      border-bottom: 1px solid $primary-blue;
-      font-size: 1rem;
-      padding-bottom: 0.25rem;
-    }
-  }
-}
-
-.map-container {
+.landing-container {
   height: 90vh;
-  #map {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title {
+    font-size: 2.5rem;
+    color: white;
+    font-family: $font-header;
+  }
+}
+
+.signup-container {
+  height: 50px;
+  margin-bottom: $nav-height;
+  input {
+    padding: 0rem 1rem;
+    width: 400px;
+    font-family: $font-body;
+    vertical-align: top;
     height: 100%;
+    outline: 0;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+  }
+  .submit-btn {
+    cursor: pointer;
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    background-color: #ECECEC;
+    color: $primary-blue;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem;
+      font-family: $font-body;
+    }
   }
 }

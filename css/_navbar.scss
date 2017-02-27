@@ -1,0 +1,116 @@
+.navbar {
+  height: $nav-height;
+  color: $primary-blue;
+  background-color: white;
+}
+
+.nav-content {
+  height: 100%;
+  width: 90%;
+
+  margin: 0rem auto;
+  padding: 0rem 1.25rem;
+  position: relative;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 0.75rem;
+}
+
+.menu-button {
+  $menu-size: 32px;
+  width: $menu-size;
+  height: $menu-size;
+  background-color: white;
+  cursor: pointer;
+}
+
+$menu-item-height: 44px;
+.nav-links {
+  left: 0px;
+  top: $nav-height;
+  position: absolute;
+
+  width: 100%;
+  background-color: white;
+
+  max-height: 0px;
+  overflow: hidden;
+
+  /* NOTE
+   * this is for the dropdown menu animation on mobile
+   * BUT has a side effect of animating the height change between media queries
+   * and I have no idea how to fix that...
+   */
+  @include transition(all 0.2s ease-in-out);
+}
+
+.nav-links.show {
+  max-height: 6 * $menu-item-height;
+}
+
+.nav-link {
+  display: block;
+  padding: 0px 16px;
+
+  vertical-align: center;
+  text-transform: capitalize;
+
+  font-family: $font-header;
+  color: #818181;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 2 * $width-increments) {
+  .nav-link {
+    height: $menu-item-height;
+    line-height: $menu-item-height;
+  }
+}
+
+@media screen and (min-width: 3 * $width-increments) {
+  // 900px: show full links
+  .menu-button { display: none; }
+  .nav-links {
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+    position: static;
+
+    height: $menu-item-height;
+    line-height: $menu-item-height;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .nav-link {
+    font-size: 1,2rem;
+
+    height: auto;
+    line-height: normal;
+    display: inline-block;
+
+    padding: 12px 35px;
+    display: inline-flex;
+    align-items: flex-end;
+  }
+  .nav-link.active, .nav-link:hover {
+    border-left: none; //cancel out mobile indicator
+    color: $primary-blue;
+  }
+}
