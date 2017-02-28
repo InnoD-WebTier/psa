@@ -1,9 +1,5 @@
 @import "./vendors/normalize";
 @import "./variables";
-@import "./navbar";
-@import "./pages/landing";
-@import "./pages/about";
-@import "./pages/endorsements";
 
 .endorsements,
 .about,
@@ -28,3 +24,8 @@
     text-decoration: none;
   }
 }
+
+@import "./navbar";
+@import "./pages/landing";
+@import "./pages/about";
+@import "./pages/endorsements";
