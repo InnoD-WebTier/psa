@@ -1,0 +1,44 @@
+.landing {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title {
+    font-size: 2.5rem;
+    color: white;
+    font-family: $font-header;
+  }
+}
+
+.signup-container {
+  height: 50px;
+  margin-bottom: $nav-height;
+  input {
+    padding: 0rem 1rem;
+    width: 400px;
+    font-family: $font-body;
+    vertical-align: top;
+    height: 100%;
+    outline: 0;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+  }
+  .submit-btn {
+    cursor: pointer;
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    background-color: #ECECEC;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem;
+      font-family: $font-header;
+      color: $primary-eggshell;
+    }
+  }
+}

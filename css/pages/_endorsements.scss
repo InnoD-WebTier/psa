@@ -1,0 +1,30 @@
+.endorsements {
+  display: flex;
+  justify-content: center;
+}
+
+.search-container {
+  background-color: white;
+  padding: 1rem;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: $default-shadow;
+  input {
+    color: $primary-blue;
+    outline: 0;
+    text-decoration: 0;
+    font-family: $font-body;
+    border: 0;
+    border-bottom: 2px solid white;
+  }
+}
+
+@media screen and (min-width: 2 * $width-increments) {
+
+}
+
+@media screen and (min-width: 3 * $width-increments) {
+  .endorsements {
+    display: block;
+  }
+}

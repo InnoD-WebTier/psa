@@ -6,10 +6,9 @@
 
 .nav-content {
   height: 100%;
-  width: 90%;
+  padding: 0rem 1.5rem;
 
   margin: 0rem auto;
-  padding: 0rem 1.25rem;
   position: relative;
 
   display: flex;
@@ -32,7 +31,7 @@
 
 .menu-button {
   $menu-size: 32px;
-  width: $menu-size;
+  width: auto;
   height: $menu-size;
   background-color: white;
   cursor: pointer;
@@ -66,6 +65,9 @@ $menu-item-height: 44px;
   display: block;
   padding: 0px 16px;
 
+  height: $menu-item-height;
+  line-height: $menu-item-height;
+
   vertical-align: center;
   text-transform: capitalize;
 
@@ -79,11 +81,17 @@ $menu-item-height: 44px;
     height: $menu-item-height;
     line-height: $menu-item-height;
   }
+  .nav-content {
+
+  }
 }
 
 @media screen and (min-width: 3 * $width-increments) {
   // 900px: show full links
   .menu-button { display: none; }
+  .nav-content {
+    padding: 0rem 5rem;
+  }
   .nav-links {
     width: auto;
     height: 100%;
@@ -105,12 +113,12 @@ $menu-item-height: 44px;
     line-height: normal;
     display: inline-block;
 
-    padding: 12px 35px;
+    padding: 12px 0px 12px 70px;
     display: inline-flex;
     align-items: flex-end;
   }
   .nav-link.active, .nav-link:hover {
     border-left: none; //cancel out mobile indicator
-    color: $primary-blue;
+    color: $primary-eggshell;
   }
 }

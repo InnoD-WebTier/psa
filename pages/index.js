@@ -8,7 +8,7 @@ export default class Index extends React.Component {
 
   render () {
     return (
-      <div className="landing-container">
+      <div className="landing">
         <p className="title">Progressive Student Association</p>
         <div className="signup-container">
           <input

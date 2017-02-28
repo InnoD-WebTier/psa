@@ -1,0 +1,29 @@
+.about {
+  .title {
+    font-family: $font-header;
+    font-size: 2rem;
+    color: white;
+  }
+  .desc {
+    line-height: 2rem;
+    font-family: $font-body;
+    font-size: 1rem;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 2 * $width-increments) {
+  .about {
+    .desc {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 3 * $width-increments) {
+  .about {
+    .desc {
+      width: 50%;
+    }
+  }
+}

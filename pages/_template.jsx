@@ -14,17 +14,17 @@ import data from './data/nav.js';
 
 class NavLink extends React.Component {
   render() {
-    let name = this.props.name;
-    let link = "/";
+    let name=this.props.name;
+    let link="/";
     if (name && name.length > 0)
     link += name + "/";
 
-    let active = this.props.active ? ' active' : '';
+    let active=this.props.active ? ' active' : '';
 
     return (
       <Link
-        to = {prefixLink(link)}
-        className = {'nav-link' + active}
+        to={prefixLink(link)}
+        className={'nav-link' + active}
         onClick={this.props.clickHandler}
         >
         {name}
@@ -37,22 +37,22 @@ class Template extends React.Component {
   constructor(props) {
     super(props);
     // get pathname and strip all '/'
-    let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
-    this.state = {
+    let page=this.props.location.pathname.replace(new RegExp('/', 'g'), '');
+    this.state={
         page: page,
         showMenu: false,
     };
   }
 
   getNavLinks() {
-    let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
+    let page=this.props.location.pathname.replace(new RegExp('/', 'g'), '');
 
     return data['links'].map(link => (
       <NavLink
-        name = {link}
-        key  = {'nav-' + link}
-        active = {link === page}
-        clickHandler = {() => this.toggleMenu()}
+        name={link}
+        key ={'nav-' + link}
+        active={link === page}
+        clickHandler={() => this.toggleMenu()}
       />
     ));
   }
@@ -63,7 +63,7 @@ class Template extends React.Component {
   }
 
   render() {
-    let showMenu = this.state.showMenu ? ' show' : ' hide';
+    let showMenu=this.state.showMenu ? ' show' : ' hide';
     return (
       <div>
         <Headroom>
@@ -82,7 +82,7 @@ class Template extends React.Component {
             </div>
           </div>
         </Headroom>
-        <div className={this.props.location.pathname === prefixLink("/") ? "" : "content"}>
+        <div>
           {this.props.children}
         </div>
       </div>
