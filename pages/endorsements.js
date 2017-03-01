@@ -6,7 +6,7 @@ import { config } from 'config'
 
 class Endorsement extends React.Component {
   render() {
-
+    
   }
 }
 

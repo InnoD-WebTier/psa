@@ -13,10 +13,10 @@
 }
 
 .signup-container {
-  height: 50px;
+  height: auto;
   margin-bottom: $nav-height;
   input {
-    padding: 0rem 1rem;
+    padding: 1rem 1rem 0.9rem 1rem;
     width: 400px;
     font-family: $font-body;
     vertical-align: top;
@@ -36,9 +36,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem 2rem;
+      padding: 1rem 2rem 0.9rem 2rem;
       font-family: $font-header;
       color: $primary-eggshell;
     }
+  }
+}
+
+@media screen and (min-width: $width-increments) {
+  .landing {
+    text-align: center;
+  }
+  .signup-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 2 * $width-increments) {
+  .signup-container {
+    display: block;
   }
 }

@@ -30,10 +30,10 @@ export default class About extends React.Component {
       <div>
         <div className="about content">
           <p className="title">Here&#39;s a quick introduction.</p>
-          <p className="desc">The Progressive Student Association (PSA) was originally founded as UC Berkeley for Bernie (UCB4B). After the primary election, we reorganized ourselves as PSA in order to continue the political revolution at UC Berkeley. For info on how to get involved, comments, concerns, and questions, please do not hesitate to message this page, or email us at <span className="highlight">ucberkeleypsa@gmail.com</span>.</p>
+          <p className="desc">The Progressive Student Association (PSA) was originally founded as UC Berkeley for Bernie (UCB4B) during the 2016 Presidential Race. After the primary election, we reorganized ourselves as PSA in order to continue the political revolution at UC Berkeley. For info on how to get involved, comments, concerns, and questions, please do not hesitate to message our Facebook page or to email us at <span className="highlight">ucberkeleypsa@gmail.com</span>.</p>
         </div>
         <div className="officers-container">
-          <p className="title">Team</p>
+          <p className="title">And now ... the team!</p>
           <div className="officer-list">
             <Officer
               name={"Natasha Welingkar"}

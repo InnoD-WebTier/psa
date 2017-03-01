@@ -1,5 +1,5 @@
-$font-header: 'Circular-Bold', sans-serif;
-$font-body: 'Circular', sans-serif;
+$font-header: 'Akkurat-Bold', sans-serif;
+$font-body: 'Akkurat', sans-serif;
 $primary-blue: #077DD5;
 $primary-eggshell: #73C3FF;
 
@@ -25,4 +25,14 @@ $width-increments: 300px;
 @font-face {
   font-family: 'Circular-Bold';
   src: url('./fonts/Circular-Bold.ttf')  format('truetype'),
+}
+
+@font-face {
+  font-family: 'Akkurat';
+  src: url('./fonts/AkkuratProRegular.ttf')  format('truetype'),
+}
+
+@font-face {
+  font-family: 'Akkurat-Bold';
+  src: url('./fonts/AkkuratPro-Bold.ttf')  format('truetype'),
 }

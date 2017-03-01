@@ -4,6 +4,7 @@ import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
 import '../css/markdown-styles';
 import '../css/main';
+import Favicon from 'react-favicon';
 
 // Navigation bar adapted from navigation written by Dennis Moon
 // He's a really great frontend developer, check him out!
@@ -66,6 +67,7 @@ class Template extends React.Component {
     let showMenu=this.state.showMenu ? ' show' : ' hide';
     return (
       <div>
+        <Favicon url={prefixLink('/assets/logo.png')}/>
         <Headroom>
           <div className="navbar">
             <div className="nav-content">
