@@ -9,7 +9,7 @@ export default class Index extends React.Component {
   render () {
     return (
       <div className="landing">
-        <p className="title">Coming soon!</p>
+        <p className="title">Coming soon.</p>
       </div>
     )
   }

@@ -5,8 +5,12 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 
 class Endorsement extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    
+
   }
 }
 

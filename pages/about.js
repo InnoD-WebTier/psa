@@ -32,8 +32,8 @@ export default class About extends React.Component {
           <p className="title">Here&#39;s a quick introduction.</p>
           <p className="desc">The Progressive Student Association (PSA) was originally founded as UC Berkeley for Bernie (UCB4B) during the 2016 Presidential Race. After the primary election, we reorganized ourselves as PSA in order to continue the political revolution at UC Berkeley. For info on how to get involved, comments, concerns, and questions, please do not hesitate to message our Facebook page or to email us at <span className="highlight">ucberkeleypsa@gmail.com</span>.</p>
         </div>
-        <div className="officers-container">
-          <p className="title">And now ... the team!</p>
+        <div className="officers content">
+          <p className="title">And here&#39;s our team.</p>
           <div className="officer-list">
             <Officer
               name={"Natasha Welingkar"}
