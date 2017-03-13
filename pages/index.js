@@ -11,6 +11,7 @@ export default class Index extends React.Component {
     this.state = {
       email: '',
       submitted: false,
+      error: false,
     }
   }
 
@@ -19,10 +20,36 @@ export default class Index extends React.Component {
 
     const handleEmail = (e) => {
       this.setState({ email: e.target.value });
+      this.setState({ error: false });
     }
 
     const handleSubmit = () => {
-      this.setState({ submitted: true });
+      const email = this.state.email;
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      console.log(this.state.email);
+      const match = email.match(re);
+      console.log(match);
+      if (match) {
+        this.setState({ submitted: true });
+        this.setState({ error: false });
+      } else {
+        this.setState({ error: true });
+      }
+    }
+
+    const genErrorMsg = () => {
+      if (this.state.error) {
+        return (
+          <div className="error-msg">
+            <span>Please enter a valid email address</span>
+          </div>
+        )
+      }
+      return (
+        <div className="error-msg hidden">
+          <span>Please enter a valid email address</span>
+        </div>
+      );
     }
 
     const genSignUp = () => {
@@ -41,6 +68,7 @@ export default class Index extends React.Component {
         <div className="signup-container">
           <input
             onChange={handleEmail}
+            type="email"
             placeholder="Leave us your email and we'll get in touch!"
             value={email}
           />
@@ -50,6 +78,7 @@ export default class Index extends React.Component {
           >
             <span>Submit</span>
           </div>
+          {genErrorMsg()}
         </div>
       );
     }
