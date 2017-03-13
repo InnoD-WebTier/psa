@@ -1,20 +1,19 @@
-.endorsements {
-
-}
-
 .search-container {
   input {
     background-color: white;
     color: $primary-blue;
+    border-bottom: 2px solid white;
+
     outline: 0;
     text-decoration: 0;
-    font-family: $font-body;
     border: 0;
-    border-bottom: 2px solid white;
+
     padding: 1rem 1rem 0.8rem 1rem;
     width: 300px;
     border-radius: 5px;
+
     box-shadow: $default-shadow;
+    font-family: $font-body;
   }
 }
 
@@ -28,25 +27,31 @@
 .endorse-card {
   width: 21%;
   margin-bottom: 4.5rem;
+  border-radius: 5px;
+  box-shadow: $default-shadow;
+
   background-color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  border-radius: 5px;
+
   img {
     width: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
+
   .metadata {
     color: #757575;
     font-family: $font-header;
-    text-align: center;
+    padding: 1rem;
+
     .name {
       font-size: 1.2rem;
       margin-top: 1rem;
     }
+
     .position {
       margin-bottom: 1.8rem;
     }

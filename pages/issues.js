@@ -6,7 +6,7 @@ import { config } from 'config'
 
 class Issue extends React.Component {
   render() {
-    
+
   }
 }
 
@@ -29,7 +29,7 @@ export default class Issues extends React.Component {
     }
 
     return (
-      <div className="endorsements content">
+      <div className="issues content">
         <div className="search-container">
           <input
             placeholder="Search"
@@ -38,7 +38,7 @@ export default class Issues extends React.Component {
             onChange={handleSearch}
           />
         </div>
-        <div className="endorse-list">
+        <div className="issue-list">
         </div>
       </div>
     )

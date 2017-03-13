@@ -3,7 +3,7 @@ $font-body: 'Akkurat', sans-serif;
 $primary-blue: #077DD5;
 $primary-eggshell: #73C3FF;
 
-$default-shadow: 0 1px 3px rgb2a(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$default-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 $nav-height: 88px;
 $prefixLink: '';
@@ -19,10 +19,10 @@ $width-increments: 300px;
 
 @font-face {
   font-family: 'Akkurat';
-  src: url('./fonts/OperatorMono-Book.otf')  format('truetype'),
+  src: url('./fonts/AkkuratProRegular.ttf')  format('truetype'),
 }
 
 @font-face {
   font-family: 'Akkurat-Bold';
-  src: url('./fonts/OperatorMono-Bold.otf')  format('truetype'),
+  src: url('./fonts/AkkuratPro-Bold.ttf')  format('truetype'),
 }

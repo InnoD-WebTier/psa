@@ -17,8 +17,8 @@ class Endorsement extends React.Component {
       <div className="endorse-card">
         <img src={prefixLink(imgSource)} />
         <div className="metadata">
-          <p className="name">{this.props.name}</p>
-          <p className="position">{this.props.position}</p>
+          <span className="name">{this.props.name}</span> <br />
+          <span className="position">{this.props.position}</span>
         </div>
       </div>
     );
