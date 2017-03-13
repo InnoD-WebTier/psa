@@ -1,13 +1,27 @@
 @import "./vendors/normalize";
 @import "./variables";
+@import "./navbar";
+@import "./pages/landing";
+@import "./pages/about";
+@import "./pages/endorsements";
+@import "./pages/issues";
 
 .endorsements,
 .about,
 .landing,
-.issues {
+.issues,
+.donate, {
   background: -webkit-linear-gradient(bottom left, $primary-blue 0%, $primary-eggshell 100%);
   background: -o-linear-gradient(bottom left, $primary-blue 0%, $primary-eggshell 100%);
   background: linear-gradient(to top right, $primary-blue 0%, $primary-eggshell 100%);
+}
+
+// Not about page because it is not entirely the gardient
+.endorsements,
+.issues,
+.donate,
+.landing {
+  min-height: calc(90vh - 14rem);
 }
 
 .content {
@@ -16,13 +30,13 @@
 
 @media screen and (max-width: 2 * $width-increments) {
   .content {
-    padding: 5rem;
+    padding: 7rem 5rem;
   }
 }
 
 @media screen and (max-width: 3 * $width-increments) {
   .content {
-    padding: 3rem;
+    padding: 7rem 3rem;
   }
 }
 
@@ -30,15 +44,10 @@
   transition: all 0.5s ease;
   border-bottom: 2px solid white;
   padding-bottom: 1px;
-  &:hover {
-    color: $primary-eggshell;
-    padding: 6px 4px 4px 4px;
-    background-color: white;
-    text-decoration: none;
-  }
+  // &:hover {
+  //   color: $primary-eggshell;
+  //   padding: 6px 4px 4px 4px;
+  //   background-color: white;
+  //   text-decoration: none;
+  // }
 }
-
-@import "./navbar";
-@import "./pages/landing";
-@import "./pages/about";
-@import "./pages/endorsements";

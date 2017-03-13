@@ -1,0 +1,36 @@
+.tab-container {
+  .active {
+
+  }
+  .inactive {
+
+  }
+}
+
+.issues {
+  color: white;
+  .header {
+    font-family: $font-header;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  .current-issues {
+    font-family: $font-body;
+    margin-bottom: 15rem;
+  }
+  .past-issues {
+    font-family: $font-body;
+  }
+}
+
+.issue {
+  margin-bottom: 3rem;
+  .name {
+    font-family: $font-header;
+    font-size: 1.2rem;
+  }
+
+  .description {
+    line-height: 1.5rem;
+  }
+}

@@ -81,6 +81,7 @@ export default class Endorsements extends React.Component {
     return (
       <div className="endorsements content">
         <div className="search-container">
+          <img className="icon" src={prefixLink('/assets/search.png')} />
           <input
             placeholder="Search"
             className="search"

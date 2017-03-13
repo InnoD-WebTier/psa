@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Headroom from 'react-headroom'
+import Helmet from 'react-helmet'
+import { config } from 'config'
 import '../css/markdown-styles';
 import '../css/main';
 import Favicon from 'react-favicon';
@@ -67,6 +69,9 @@ class Template extends React.Component {
     let showMenu=this.state.showMenu ? ' show' : ' hide';
     return (
       <div>
+        <Helmet
+          title={config.siteTitle}
+        />
         <Favicon url={prefixLink('/assets/logo.png')}/>
         <Headroom>
           <div className="navbar">

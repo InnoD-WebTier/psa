@@ -1,19 +1,29 @@
 .search-container {
-  input {
-    background-color: white;
-    color: $primary-blue;
-    border-bottom: 2px solid white;
+  display: flex;
+  align-items: center;
 
+  padding: 1rem 1rem 0.8rem 1rem;
+  width: 300px;
+  border-radius: 5px;
+
+  background-color: white;
+  color: $primary-blue;
+  border-bottom: 2px solid white;
+  box-shadow: $default-shadow;
+
+  input {
     outline: 0;
     text-decoration: 0;
     border: 0;
+    width: 100%;
 
-    padding: 1rem 1rem 0.8rem 1rem;
-    width: 300px;
-    border-radius: 5px;
-
-    box-shadow: $default-shadow;
     font-family: $font-body;
+  }
+
+  .icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 1rem;
   }
 }
 
@@ -21,7 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 5rem;
+  padding-top: 4.5rem;
 }
 
 .endorse-card {
@@ -69,7 +79,7 @@
 
 @media screen and (max-width: 2 * $width-increments) {
   .search-container {
-    text-align: center;
+    width: calc(100% - 2rem);
   }
   .endorse-card {
     width: 100%;

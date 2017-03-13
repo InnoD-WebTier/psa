@@ -8,7 +8,6 @@ class Officer extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render () {
     return (
       <div className="officer">
@@ -21,8 +20,6 @@ class Officer extends React.Component {
     );
   }
 }
-
-
 
 export default class About extends React.Component {
   render () {
