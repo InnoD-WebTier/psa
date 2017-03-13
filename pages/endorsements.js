@@ -36,7 +36,7 @@ export default class Endorsements extends React.Component {
 
   render () {
 
-    const searchTerm = this.state.searchTerm;
+    const searchTerm = this.state.searchTerm.toLowerCase();
 
     const people = [
       {
