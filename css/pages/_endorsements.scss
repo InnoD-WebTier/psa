@@ -1,30 +1,64 @@
 .endorsements {
-  display: flex;
-  justify-content: center;
+
 }
 
 .search-container {
-  background-color: white;
-  padding: 1rem 1rem 0.8rem 1rem;
-  width: 300px;
-  border-radius: 5px;
-  box-shadow: $default-shadow;
   input {
+    background-color: white;
     color: $primary-blue;
     outline: 0;
     text-decoration: 0;
     font-family: $font-body;
     border: 0;
     border-bottom: 2px solid white;
+    padding: 1rem 1rem 0.8rem 1rem;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: $default-shadow;
   }
 }
 
-@media screen and (min-width: 2 * $width-increments) {
-
+.endorse-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 5rem;
 }
 
-@media screen and (min-width: 3 * $width-increments) {
+.endorse-card {
+  width: 23%;
+  margin-bottom: 3rem;
+  img {
+    width: 100%;
+  }
+  .metadata {
+    color: white;
+    font-family: $font-header;
+    text-align: center;
+    .name {
+      font-size: 1.2rem;
+      margin-bottom: 0rem;
+    }
+    .position {
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 3 * $width-increments) {
   .endorsements {
     display: block;
+  }
+  .endorse-card {
+    width: 43%;
+  }
+}
+
+@media screen and (max-width: 2 * $width-increments) {
+  .search-container {
+    text-align: center;
+  }
+  .endorse-card {
+    width: 100%;
   }
 }

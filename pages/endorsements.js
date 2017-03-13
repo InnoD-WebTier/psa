@@ -11,18 +11,85 @@ class Endorsement extends React.Component {
 
   render() {
 
+    const imgSource = '/assets/' + this.props.name.toLowerCase() + '.jpeg';
+
+    return (
+      <div className="endorse-card">
+        <img src={imgSource} />
+        <div className="metadata">
+          <p className="name">{this.props.name}</p>
+          <p className="position">{this.props.position}</p>
+        </div>
+      </div>
+    );
   }
 }
 
 export default class Endorsements extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchTerm: '',
+    }
+  }
+
   render () {
+
+    const searchTerm = this.state.searchTerm;
+
+    const people = [
+      {
+        name: "Andre",
+        position: "President",
+      },
+      {
+        name: "Helen",
+        position: "Other Thing",
+      },
+      {
+        name: "Ian",
+        position: "Other Thing",
+      },
+      {
+        name: "Raj",
+        position: "Other Thing",
+      },
+      {
+        name: "Ian",
+        position: "Other Thing",
+      },
+    ];
+
+    const filtered = people.filter((person) => {
+      const valid = person.name.toLowerCase().includes(searchTerm);
+      return valid;
+    });
+
+    const endorseList = filtered.map((person, i) => (
+      <Endorsement
+        key={i}
+        name={person.name}
+        position={person.position}
+      />
+    ));
+
+    const handleSearch = (e) => {
+      this.setState({ searchTerm: e.target.value });
+    }
+
     return (
       <div className="endorsements content">
         <div className="search-container">
           <input
             placeholder="Search"
             className="search"
+            value={searchTerm}
+            onChange={handleSearch}
           />
+        </div>
+        <div className="endorse-list">
+          {endorseList}
         </div>
       </div>
     )
