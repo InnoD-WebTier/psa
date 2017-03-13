@@ -13,9 +13,11 @@
 }
 
 .signup-container {
-  height: auto;
+  // to center on the page
   margin-bottom: $nav-height;
   input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding: 1rem 1rem 0.9rem 1rem;
     width: 400px;
     font-family: $font-body;
@@ -27,11 +29,27 @@
     display: inline-block;
   }
   .submit-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     cursor: pointer;
     height: 100%;
     width: auto;
     display: inline-block;
     background-color: #ECECEC;
+    width: 125px;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem 0.9rem 2rem;
+      font-family: $font-header;
+      color: $primary-eggshell;
+    }
+  }
+  .thanks {
+    width: 525px;
+    background-color: white;
+    border-radius: 5px;
     span {
       display: flex;
       align-items: center;
