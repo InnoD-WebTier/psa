@@ -26,21 +26,29 @@
 }
 
 .endorse-card {
-  width: 23%;
-  margin-bottom: 3rem;
+  width: 21%;
+  margin-bottom: 4.5rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
   img {
     width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
   .metadata {
-    color: white;
+    color: #757575;
     font-family: $font-header;
     text-align: center;
     .name {
       font-size: 1.2rem;
-      margin-bottom: 0rem;
+      margin-top: 1rem;
     }
     .position {
-      margin-top: 0.3rem;
+      margin-bottom: 1.8rem;
     }
   }
 }
